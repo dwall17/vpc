@@ -41,3 +41,6 @@ Subnet assocations: private-1a, private-1b
 Name: my-igw
 
 VPC: my-vpc
+
+## Create EC2 instances in the subnets
+For instances created in the private subnets, we will need a NAT gateway so they can communicate to the Internet
