@@ -46,3 +46,6 @@ VPC: my-vpc
 For instances created in the private subnets, we will need a NAT gateway so they can communicate to the Internet. NAT gateways always go in public subnets
 
 For the instances in the private subnets to access this natgw, they're gonna need a route to the natgw which we must add to the private route table
+
+### Launch the instances
+aws ec2 run-instances --image-id ami-08b5b3a93ed654d19 --instance-type t2.micro --security-group-ids <something> --subnet-id <subnet_id> --key-name my-first-keypair --user-data <user_data>
