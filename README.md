@@ -43,4 +43,6 @@ Name: my-igw
 VPC: my-vpc
 
 ## Create EC2 instances in the subnets
-For instances created in the private subnets, we will need a NAT gateway so they can communicate to the Internet
+For instances created in the private subnets, we will need a NAT gateway so they can communicate to the Internet. NAT gateways always go in public subnets
+
+For the instances in the private subnets to access this natgw, they're gonna need a route to the natgw which we must add to the private route table
